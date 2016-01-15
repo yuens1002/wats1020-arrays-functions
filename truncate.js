@@ -16,8 +16,36 @@
 // This portion of the script is meant to call and display the result of your Function.
 // You do not need to change the following lines, but you may change them if you 
 // are experimenting further or pursuing stretch goals.
-var originalText = "There are two hard things in Computer Science: Cach invalidation, naming things, and off-by-one errors.";
+/* var originalText = "There are two hard things in Computer Science: Cach invalidation, naming things, and off-by-one errors.";
 var wordLimit = 8;
-var shortText = truncateWords(originalText, wordLimit);
+var shortText = truncateWords(originalText, wordLimit) {  
+}
 console.log('originalText: ' + originalText);
-console.log('shortText: ' + shortText);
+console.log('shortText: ' + shortText); */
+
+
+function truncateWords(longText, numWords) {
+    var str = longText.split(" ");
+    function removeWords(arrayText) {
+        // reminder to self: setting a var to store str.splice is actually the parts removed not the remaining 
+        // numWords is the 1st word to remove (position + 1) 
+        arrayText.splice(numWords, arrayText.length - numWords);
+        /* avoids the space between the last word and the ellipses doing it 
+        way vs adding by splice from the previous step */
+        return arrayText.join(" ") + "...";
+    }
+    /* this calls the function removeWords, gets the returned value 
+    then returns the value of removeWords for truncateWords */
+    return removeWords(str); 
+}
+ 
+
+
+
+
+
+
+
+
+
+
