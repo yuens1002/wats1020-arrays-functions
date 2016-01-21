@@ -1,9 +1,13 @@
 // WATS 1020 Array & Function Assignment - Sunny Yuen
 
+var str = 'There are several different ways to truncate text. The simplest way is often to just truncate according to the number of characters in the String.'
+
+var wordCount = '10'
+
 function truncateWords(longText, numWords) {
     var str = longText.split(" ");
     function removeWords(arrayText) {
-        // reminder to self: setting a var to store str.splice is actually the parts removed not the remaining 
+        // reminder to self: setting a var to store arrayText.splice is actually the parts removed not the remaining 
         // numWords is the 1st word to remove (position + 1) 
         arrayText.splice(numWords, arrayText.length - numWords);
         /* avoids the space between the last word and the ellipses doing it 
@@ -12,8 +16,10 @@ function truncateWords(longText, numWords) {
     }
     /* this calls the function removeWords, gets the returned value 
     then returns the value of removeWords for truncateWords */
-    return removeWords(str); 
+    console.log (removeWords(str)); 
 }
+
+truncateWords(str, wordCount);
  
 
 
