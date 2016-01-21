@@ -3,9 +3,15 @@
     <title>Arrays & Functions Assignment</title>
   </head>
   <body>
+    <script type="text/javascript" src="truncate.js"></script>  
     <h1>Arrays &amp; Functions Assignment</h1>
     <p>The goal of this assignment is to create a reusable function that truncates the words in a `string` to the specified number of words.</p>
-    <p>View the assignment output in your browser console. No output will display on this page.</p>
-    <script type="text/javascript" src="truncate.js"></script>
+    <p>Enter a piece of string to truncate</p>
+      <input type="text" size="100" id="string">
+      <p>Enter the result number of words</p>
+      <input id ="word-count" type="number" size="2">
+      <p><button id="submit" onclick="truncateWords(document.getElementById('string').value, document.getElementById('word-count').value)">submit</button></p>
+      <p id="result"></p>
+    
   </body>
 </html>

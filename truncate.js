@@ -1,8 +1,5 @@
 // WATS 1020 Array & Function Assignment - Sunny Yuen
 
-var str = 'There are several different ways to truncate text. The simplest way is often to just truncate according to the number of characters in the String.'
-
-var wordCount = '10'
 
 function truncateWords(longText, numWords) {
     var str = longText.split(" ");
@@ -16,17 +13,8 @@ function truncateWords(longText, numWords) {
     }
     /* this calls the function removeWords, gets the returned value 
     then returns the value of removeWords for truncateWords */
-    console.log (removeWords(str)); 
+    document.getElementById('result').innerHTML = removeWords(str);
 }
-
-truncateWords(str, wordCount);
- 
-
-
-
-
-
-
 
 
 
